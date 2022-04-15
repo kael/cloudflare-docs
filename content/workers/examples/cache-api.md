@@ -53,7 +53,7 @@ async function handleRequest(event) {
 
 addEventListener('fetch', event => {
   try {
-    const request = event.request;
+    const request = event.request; // What's the point ?
     return event.respondWith(handleRequest(event));
   } catch (e) {
     return event.respondWith(new Response('Error thrown ' + e.message));
