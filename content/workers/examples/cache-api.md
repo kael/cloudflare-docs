@@ -30,6 +30,7 @@ async function handleRequest(event) {
       `Response for request url: ${request.url} not present in cache. Fetching and caching request.`
     );
     // If not in cache, get it from origin
+    // `fetch` is querying the worker's URL
     response = await fetch(request);
 
     // Must use Response constructor to inherit all of response's fields
